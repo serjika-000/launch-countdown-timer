@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    position: relative;
+    width: 100%;
+    min-height: 667px;
+    height: 100vh;
+    background: linear-gradient(
+      180deg,
+      #1d1e28 0.12%,
+      #261c2d 94.84%,
+      #261a2d 100%
+    );
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Red Hat Text", sans-serif;
+  
+    font-size: 36px;
+    line-height: 71px;
+    letter-spacing: -1.08px;
+    color: #fb5e84;
+  }
+  
+  .stars {
+    position: absolute;
+    top: 0px;
+    max-width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .hills {
+    width: 100%;
+    height: 168px;
+    position: absolute;
+    bottom: 0px;
+  }
+  
+  .header {
+    width: 100%;
+  }
+  
+  h1 {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 6.13636px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 327px;
+    margin-top: 142px;
+    margin-bottom: 54px;
+    z-index: 2;
+  }
+  /* ****************************************************** */
+  
+  .flip-card {
+    position: relative;
+  }
+  
+  .top,
+  .bottom,
+  .flip-card .top-flip,
+  .flip-card .bottom-flip {
+    width: 70px;
+    height: 35.3px;
+    overflow: hidden;
+  }
+  
+  .top,
+  .flip-card .top-flip {
+    background-color: #343650;
+    border-radius: 4px 4px 0px 0px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.25);
+  }
+  
+  .bottom,
+  .flip-card .bottom-flip {
+    background-color: #343650;
+    align-items: flex-end;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 5px 0px 0px #191a23;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .flip-card .top-flip {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    animation: flip-top 250ms ease-in;
+    transform-origin: bottom;
+  }
+  
+  @keyframes flip-top {
+    100% {
+      transform: rotateX(90deg);
+    }
+  }
+  
+  .flip-card .bottom-flip {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    animation: flip-bottom 250ms ease-out 250ms;
+    transform-origin: top;
+    transform: rotateX(90deg);
+  }
+  
+  @keyframes flip-bottom {
+    100% {
+      transform: rotateX(0deg);
+    }
+  }
+  
+  .container {
+    display: flex;
+    gap: 16px;
+  }
+  
+  h3 {
+    font-size: 7px;
+    line-height: 9px;
+    text-align: center;
+    letter-spacing: 2.95937px;
+    color: #8385a9;
+    margin-top: 14px;
+  }
+  
+  /* ****************************************************** */
+  footer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 48px;
+  }
+  
+  .network-container {
+    z-index: 1;
+    width: 136px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1080px) {
+    .hills {
+      height: 266px;
+    }
+  
+    h1 {
+      width: 440px;
+      height: 29px;
+      font-size: 22px;
+      line-height: 29px;
+      letter-spacing: 7.5px;
+      margin-top: 132px;
+      margin-bottom: 104px;
+    }
+  
+    .container {
+      gap: 32px;
+    }
+  
+    .top,
+    .bottom,
+    .flip-card .top-flip,
+    .flip-card .bottom-flip {
+      width: 148px;
+      height: 70px;
+    }
+  
+    .top,
+    .flip-card .top-flip {
+      font-size: 80px;
+      line-height: 71px;
+      letter-spacing: -2.4px;
+      border-radius: 8px 8px 0px 0px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    }
+  
+    .bottom,
+    .flip-card .bottom-flip {
+      font-size: 80px;
+      line-height: 71px;
+      letter-spacing: -2.4px;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0px 16px 0px 0px rgba(25, 26, 35, 1);
+    }
+  
+    .top,
+    .flip-card .top-flip {
+      color: #fb5e84;
+      font-size: 80px;
+      line-height: 140px;
+      letter-spacing: -2.4px;
+  
+      background-color: #343650;
+      border-radius: 8px 8px 0 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    }
+  
+    .bottom,
+    .flip-card .bottom-flip {
+      color: #fb5e84;
+      font-size: 80px;
+      line-height: 140px;
+      letter-spacing: -2.4px;
+      background-color: #343650;
+      border-radius: 0 0 8px 8px;
+      align-items: flex-end;
+      box-shadow: 0px 16px 0px 0px rgba(25, 26, 35, 1);
+    }
+  
+    h3 {
+      font-size: 14px;
+      line-height: 19px;
+      letter-spacing: 5.91875px;
+      margin-top: 32px;
+    }
+  
+    .facebook-logo:hover path {
+      fill: #fb5e84;
+      cursor: pointer;
+    }
+  
+    .pinterest-logo:hover path {
+      fill: #fb5e84;
+      cursor: pointer;
+    }
+    .instagram-logo:hover path {
+      fill: #fb5e84;
+      cursor: pointer;
+    }
+  }
